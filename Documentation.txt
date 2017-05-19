@@ -1,0 +1,31 @@
+Usage:
+	python .../IntegerPixelSharpness.py [source_filename] [-a] [-c <resolution>] [-d <scale>] [-D <resolution>] [-m <length>] [output_filename]
+Help:
+	Pixelises an image (or sequence) and can even upscale the result.
+	Similar to the Mosaic function in Premiere Pro but more accurate.
+Options:
+	-a		Output image with alpha channel.
+	-c		The first resolution to convert the image into.
+			This is the important part where the image
+			gets transformed into a lower resolution to
+			remove the blurriness from a high-ish reolution
+			image (or sequence) that's displaying low
+			resolution content.
+			Format is int + "x" + int. ie. 1280x720
+			If omitted defaults to 424x240.
+	-d		The second step where the image is upscaled
+			using nearest neighbour to a certain scaling
+			factor. -D cannot be used simutaneously with
+			this or an error will return. If both are
+			omitted then image will not be upscaled.
+	-D		The second step where the image is upscaled
+			using nearest neighbour to another resolution.
+			-d cannot be used simutaneously with this or an
+			error will return. If both are omitted then
+			image will not be upscaled.
+			Format is int + "x" + int. ie. 1280x720
+	-m		Indicates that an image sequence should be
+			rendered. The source_filename would be the
+			first in the sequence and should have a file
+			name like image00000.png. The amount of images
+			in the sequence must also be specified.
