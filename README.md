@@ -15,5 +15,4 @@ or simply use
 
 `pip install pillow`
 
-This is under the GNU AGPL V3.0 License
-Recommended for personal use.
+This is under the MIT License.
